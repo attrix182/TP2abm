@@ -3,4 +3,6 @@
 
 int pedirOpcionMenu();
 
+int getOptionModify();
+
 #endif // MENU_H_INCLUDED

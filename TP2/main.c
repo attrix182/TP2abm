@@ -9,14 +9,18 @@
 int main()
 {
     int opcion;
+    int optionModify;
     char seguir = 's';
     int id;
     char name[51];
     char lastName[51];
     int salary;
     int sector;
+
     Employee list[TAM];
+
     initEmployees(list, TAM);
+
     harcode(list, TAM);
 
 
@@ -49,18 +53,9 @@ int main()
             printf(" ingrese id de empleado a modificar \n");
             scanf("%d", &id);
             fflush(stdin);
-            printf(" new name \n");
-            scanf("%s", name);
-            fflush(stdin);
-            printf(" new lastName \n");
-            scanf("%s", lastName);
-            fflush(stdin);
-            printf(" new salary \n");
-            scanf("%d", &salary);
-            fflush(stdin);
-            printf(" new sector \n");
-            scanf("%d", &sector);
-            modifyEmployee(list, TAM, id, name, lastName, salary, sector);
+
+            optionModify = getOptionModify();
+            modifyEmployee(list, TAM, id, name, lastName, salary, sector, optionModify);
             break;
         case 3:
             printf(" ingrese id de empleado a remover \n");
@@ -69,6 +64,7 @@ int main()
             removeEmployee(list, TAM, id);
             break;
         case 4:
+            //    sortEmployees(list, TAM, 1);
             printEmployees(list, TAM);
             break;
         case 5:
