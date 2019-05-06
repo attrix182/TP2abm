@@ -42,10 +42,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="menu.h" />
-		<Unit filename="sectores.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="sectores.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

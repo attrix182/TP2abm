@@ -41,9 +41,10 @@ int printEmployees(Employee list[], int len)
 {
     int i;
     printf("%10s - %10s - %10s - %10s - %10s \n", "ID", "NAME", "LAST NAME","SALARY"," SECTOR");
+    sortEmployees(list, len, 1);
+
     for(i = 0; i < len; i++)
     {
-
         if(list[i].isEmpty == 0)
         {
             printf("%10d  %10s  %10s  %10.2f  %10d \n", list[i].id, list[i].name, list[i].lastName, list[i].salary, list[i].sector);
@@ -84,8 +85,8 @@ int removeEmployee(Employee list[], int len, int id)
 
 int modifyEmployee(Employee list[], int len, int id, char name[],char lastName[],float salary,int sector, int option)
 {
-    int idAeditar = findEmployeeById(list, len, id);
-    if(idAeditar == -1)
+    int posToEdit = findEmployeeById(list, len, id);
+    if(posToEdit == -1)
     {
         return -1;
     }
@@ -95,34 +96,31 @@ int modifyEmployee(Employee list[], int len, int id, char name[],char lastName[]
         printf(" new name \n");
         scanf("%s", name);
         fflush(stdin);
-        strcpy(list[idAeditar].name, name);
-        list[idAeditar].isEmpty = 0;
+        strcpy(list[posToEdit].name, name);
+        list[posToEdit].isEmpty = 0;
         break;
     case 2:
         printf(" new lastName \n");
         scanf("%s", lastName);
         fflush(stdin);
-        strcpy(list[idAeditar].lastName, lastName);
-        list[idAeditar].isEmpty = 0;
+        strcpy(list[posToEdit].lastName, lastName);
+        list[posToEdit].isEmpty = 0;
         break;
     case 3:
         printf(" new salary \n");
         scanf("%f", &salary);
         fflush(stdin);
-        list[idAeditar].salary = salary;
-        list[idAeditar].isEmpty = 0;
+        list[posToEdit].salary = salary;
+        list[posToEdit].isEmpty = 0;
         break;
     case 4:
         printf(" new sector \n");
         scanf("%d", &sector);
         fflush(stdin);
-        list[idAeditar].sector = sector;
-        list[idAeditar].isEmpty = 0;
+        list[posToEdit].sector = sector;
+        list[posToEdit].isEmpty = 0;
         break;
     }
-
-
-
 
 
     return 0;
@@ -133,11 +131,11 @@ int harcode(Employee list[], int len)
 {
     int i;
 
-    int id[4]= {42, 43, 44, 45};
+    int id[4]= {1, 2, 20, 21};
     char name[4][50]= {"Fernado", "Juan", "Pablo", "Roberto"};
-    char lastName[4][13]= {"Perez", "Lopez", "Suarez", "Garcia"};
+    char lastName[4][13]= {"Andes", "Caceres", "Borges", "Echeverria"};
     float salary[4]= {100, 200, 300, 400};
-    int sector[4]= { 2, 4, 3, 1};
+    int sector[4]= { 8, 2,2,9};
     int isEmpty[4]= { 0, 0, 0, 0};
 
     for(i=0; i<4; i++)
@@ -157,24 +155,36 @@ int sortEmployees(Employee list[], int len, int order)
 {
     int i;
     int j;
-    int aux;
-    for(i=0; i<len-order; i++)
+    Employee aux;
+    for(i=0; i<len; i++)
     {
         for(j=i+1; j<len; j++)
         {
-            if (list[i].sector < list[j].sector)
+            if( strcmp(list[i].lastName, list[j].lastName) > 0)
             {
-                aux=list[i].sector;
-                list[i].sector = list[j].sector;
-                list[j].sector = aux;
-
+                aux=list[i];
+                list[i] = list[j];
+                list[j] = aux;
             }
         }
 
     }
-    //printEmployees(list, len);
 
     return 0;
 }
 
+int searchEmpty(Employee list[], int len)
+{
+    int i;
+    int id;
 
+    for(i=0; i<len; i++)
+    {
+        if(list[i].isEmpty ==1)
+        {
+            id = i+1;
+            break;
+        }
+    }
+    return id;
+}

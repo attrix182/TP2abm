@@ -100,4 +100,15 @@ indicate UP or DOWN order
  */
 int sortEmployees(Employee list[], int len, int order);
 
+
+
+/** \brief
+ *
+ * \param list[] Employee
+ * \param len int
+ * \return int
+ *
+ */
+int searchEmpty(Employee list[], int len);
+
 #endif // ARRAYEMPLOYEES_H_INCLUDED

@@ -14,6 +14,7 @@ int pedirOpcionMenu()
 int getOptionModify()
 {
     int optionModify;
+    printf("%s","             MODIFICACION            \n");
     printf("%10s - %10s - %10s - %10s \n", "1.NAME", "2.LAST NAME","3.SALARY","4.SECTOR");
     scanf("%d", &optionModify);
 

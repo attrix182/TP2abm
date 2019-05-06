@@ -4,24 +4,24 @@
 #include <string.h>
 #include <ctype.h>
 #include "ArrayEmployees.h"
-#define TAM 1000
+#define TAM 10
 
 int main()
 {
     int opcion;
     int optionModify;
     char seguir = 's';
-    int id;
     char name[51];
     char lastName[51];
     int salary;
     int sector;
+    int id;
 
     Employee list[TAM];
 
     initEmployees(list, TAM);
 
-    harcode(list, TAM);
+    //harcode(list, TAM);
 
 
     do
@@ -31,10 +31,11 @@ int main()
         switch(opcion)
         {
         case 1:
-            printf(" id \n");
-            scanf("%d", &id);
-            fflush(stdin);
-            printf(" name \n");
+            // printf(" id \n");
+            //scanf("%d", &id);
+            //fflush(stdin);
+            id = searchEmpty(list, TAM);
+            printf(" Name \n");
             scanf("%s", name);
             fflush(stdin);
             printf(" lastName \n");
@@ -64,7 +65,6 @@ int main()
             removeEmployee(list, TAM, id);
             break;
         case 4:
-            //    sortEmployees(list, TAM, 1);
             printEmployees(list, TAM);
             break;
         case 5:
