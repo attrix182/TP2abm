@@ -9,7 +9,7 @@
 
 1557513881 e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.h
 
-1557515039 source:e:\usuarios\escritorio\utn1cuatri\tp2\main.c
+1557515718 source:e:\usuarios\escritorio\utn1cuatri\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
@@ -28,7 +28,7 @@
 
 1556562727 source:e:\usuarios\escritorio\utn1cuatri\tp2\sectores.c
 
-1557513334 source:e:\usuarios\escritorio\utn1cuatri\tp2\funcionesget.c
+1557515736 source:e:\usuarios\escritorio\utn1cuatri\tp2\funcionesget.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -36,5 +36,5 @@
 	"funcionesGet.h"
 	"ArrayEmployees.h"
 
-1557428975 e:\usuarios\escritorio\utn1cuatri\tp2\funcionesget.h
+1557515718 e:\usuarios\escritorio\utn1cuatri\tp2\funcionesget.h
 

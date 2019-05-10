@@ -51,16 +51,6 @@ float getFloat(char mensaje[])
 }
 
 
-char getChar(char mensaje[])
-{
-    char auxiliarChar;
-    printf("%s", mensaje);
-    fflush(stdin);
-    scanf("%s", &auxiliarChar);
-    return auxiliarChar;
-}
-
-
 void getString(char mensaje[], char input[])
 {
     printf(mensaje);

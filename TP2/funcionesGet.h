@@ -1,27 +1,20 @@
 
-/** \brief Solicita un solo numero
+/** \brief Solicita un valor numerico de tipo Entero
  *
  * \param mensaje Es el mensaje que será mostrado al usuario
- * \return Es el numero ingresado por el usuario.
+ * \return Es el dato validado ingresado por el usuario.
  */
 int getInt(char mensaje[]);
 
-/** \brief
+/** \brief Solicita un valor numerico de tipo Flotante
  *
- * \param
- * \param
- * \return
+ * \param mensaje Es el mensaje que será mostrado al usuario
+ * \return Es el dato validado ingresado por el usuario.
  *
  */
 float getFloat (char mensaje[]);
 
 
-/** \brief Solicita un caracter al usuario y devuelve el resultado
- *
- * \param mensaje Es el mensaje que será mostrado al usuario
- * \return Es el caracter ingresado por el usuario.
- */
-char getChar(char mensaje[]);
 
 
 /** \brief Solicita un texto al usuario.
