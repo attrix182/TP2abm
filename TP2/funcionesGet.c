@@ -23,8 +23,30 @@ int getInt(char mensaje[])
         enteroADevolver = atoi(auxiliarChar);
     }
 
-
     return enteroADevolver;
+
+}
+
+float getFloat(char mensaje[])
+{
+    char auxiliarChar[10];
+    float floatADevolver;
+
+    printf("%s", mensaje);
+    scanf("%s", auxiliarChar);
+    fflush(stdin);
+    floatADevolver = atof(auxiliarChar);
+
+    while(floatADevolver == 0)
+    {
+        printf("%s", "Valor invalido. Ingrese un numero \n");
+        scanf("%s", auxiliarChar);
+        fflush(stdin);
+        floatADevolver = atof(auxiliarChar);
+    }
+
+
+    return floatADevolver;
 
 }
 
@@ -36,15 +58,6 @@ char getChar(char mensaje[])
     fflush(stdin);
     scanf("%s", &auxiliarChar);
     return auxiliarChar;
-}
-
-
-float getFloat(char mensaje[])
-{
-    float auxiliarFloat;
-    printf("%s", mensaje);
-    scanf("%f", &auxiliarFloat);
-    return auxiliarFloat;
 }
 
 

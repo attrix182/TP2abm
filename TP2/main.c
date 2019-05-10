@@ -5,19 +5,19 @@
 #include <ctype.h>
 #include "ArrayEmployees.h"
 #include "funcionesGet.h"
-#define TAM 2
+#define TAM 1000
 
 int main()
 {
 
     char name[51];
     char lastName[51];
-    int salary;
+    float salary;
     int sector;
     int id;
     int idCheck;
-    int sumSal;
-    int average;
+    float sumSal;
+    float average;
     int salarySup;
     int numberOfEmployees;
     int opcion;
@@ -29,7 +29,10 @@ int main()
 
     sEmployee list[TAM];
     initEmployees(list, TAM);
-    //harcode(list, TAM);
+
+
+     hardcode(list, TAM);
+     flagCreate = 1;
 
     do
     {
@@ -41,14 +44,15 @@ int main()
             id = generateID(list, TAM);
             getString("Ingrese nombre del empleado \n", name);
             getString("Ingrese apellido del empleado \n", lastName);
-            salary = getInt("Ingrese salario\n");
+            salary = getFloat("Ingrese salario\n");
             sector = getInt("Ingrese sector\n");
             addFull = addEmployee(list, TAM, id, name, lastName, salary, sector);
+            flagCreate = 1;
+
             if(addFull == -1)
             {
                 printf("No hay lugar para guardar a ese Empleado\n");
             }
-            flagCreate = 1;
             break;
         case 2:
             if(flagCreate == 1)
@@ -96,17 +100,22 @@ int main()
                 switch(optionShow)
                 {
                 case 1:
+                    system("cls");
+                    printf("\n                             INFORMES                 \n\n");
                     printEmployees(list, TAM);
+                    printf("\n");
                     break;
                 case 2:
                     sumSal = showSalary(list, TAM);
                     numberOfEmployees = searchFull(list, TAM);
                     average = sumSal/numberOfEmployees;
                     salarySup = searchSalarySup(list, TAM);
-                    printf("\n %s %d\n", "El total de los salarios es: ", sumSal);
-                    printf("\n %s %d\n", "El promedio de los salarios es: ", average);
+                    system("cls");
+                    printf("\n                   INFORMES                 \n");
+                    printf("\n %s %.2f\n", "El total de los salarios es: ", sumSal);
+                    printf("\n %s %.2f\n", "El promedio de los salarios es: ", average);
                     printf("\n %s %d\n\n", "La cantidad de empleados que superan el salario promedio es: ", salarySup);
-                    break;
+
                 }
             }
             else

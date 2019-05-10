@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1557509761 source:e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.c
+1557515443 source:e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -7,9 +7,9 @@
 	"ArrayEmployees.h"
 	"funcionesGet.h"
 
-1557510979 e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.h
+1557513881 e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.h
 
-1557510499 source:e:\usuarios\escritorio\utn1cuatri\tp2\main.c
+1557515039 source:e:\usuarios\escritorio\utn1cuatri\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
@@ -20,7 +20,7 @@
 
 1557427659 e:\usuarios\escritorio\utn1cuatri\tp2\menu.h
 
-1557511372 source:e:\usuarios\escritorio\utn1cuatri\tp2\menu.c
+1557514007 source:e:\usuarios\escritorio\utn1cuatri\tp2\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
@@ -28,7 +28,7 @@
 
 1556562727 source:e:\usuarios\escritorio\utn1cuatri\tp2\sectores.c
 
-1557429192 source:e:\usuarios\escritorio\utn1cuatri\tp2\funcionesget.c
+1557513334 source:e:\usuarios\escritorio\utn1cuatri\tp2\funcionesget.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

@@ -103,7 +103,7 @@ int modifyEmployee(sEmployee list[], int len, int id, char name[],char lastName[
         strcpy(list[posToEdit].lastName, lastName);
         break;
     case 3:
-        salary = getInt("Ingrese nuevo salario\n");;
+        salary = getFloat("Ingrese nuevo salario\n");;
         list[posToEdit].salary = salary;
         break;
     case 4:
@@ -117,12 +117,12 @@ int modifyEmployee(sEmployee list[], int len, int id, char name[],char lastName[
 
 }
 
-int harcode(sEmployee list[], int len)
+int hardcode(sEmployee list[], int len)
 {
     int i;
     int id[4]= {1, 2, 3, 4};
     char name[4][50]= {"Fernado", "Juan", "Pablo", "Roberto"};
-    char lastName[4][13]= {"Andes", "Caceres", "Rojas", "Echeverria"};
+    char lastName[4][13]= {"Andes", "caceres", "Caceres", "Echeverria"};
     float salary[4]= {100, 200, 300, 400};
     int sector[4]= { 8, 2,3,2};
     int isEmpty[4]= { 0, 0, 0, 0};
@@ -150,13 +150,13 @@ int sortEmployees(sEmployee list[], int len, int order)
         for(j=i+1; j<len; j++)
         {
             if(list[i].isEmpty==0 && list[j].isEmpty==0 ){
-            if(strcmp(list[i].lastName, list[j].lastName)<0)
+            if(stricmp(list[i].lastName, list[j].lastName)>0)
             {
                 aux =list[i];
                 list[i] = list[j];
                 list[j] = aux;
             }
-            else if(strcmp(list[i].lastName, list[j].lastName) == 0 && list[j].sector > list[i].sector)
+            else if(stricmp(list[i].lastName, list[j].lastName) == 0 && list[j].sector < list[i].sector)
             {
                 aux=list[i];
                 list[i] = list[j];
@@ -186,10 +186,10 @@ int generateID(sEmployee list[], int len)
     return id;
 }
 
-int showSalary(sEmployee list[], int len)
+float showSalary(sEmployee list[], int len)
 {
     int i;
-    int sumSalary = 0;
+    float sumSalary = 0;
 
     for(i=0; i<len; i++)
     {

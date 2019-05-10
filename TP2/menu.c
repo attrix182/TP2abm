@@ -23,7 +23,7 @@ int getOptionShow()
 {
     int optionShow;
     printf("                   INFORMES                 \n");
-    printf("%s %s \n", " 1. Empleados ordenados alfabeticamente por Apellido y Sector\n", "2. Total y promedio de los salarios, y cuántos empleados superan el salario promedio");
+    printf("%s %s \n", " 1. Empleados ordenados alfabeticamente por Apellido y Sector\n", "2. Total y promedio de los salarios, y cuantos empleados superan el salario promedio");
     optionShow = getInt("\nIngrese una opcion\n");
     return optionShow;
 }

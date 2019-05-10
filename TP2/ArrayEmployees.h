@@ -82,7 +82,7 @@ int modifyEmployee(sEmployee list[], int len, int id, char name[],char lastName[
  * \return int
  *
  */
-int harcode(sEmployee list[], int len);
+int hardcode(sEmployee list[], int len);
 
 /** \brief Sort the elements in the array of sEmployees, the argument order
 indicate UP or DOWN order
@@ -113,7 +113,7 @@ int generateID(sEmployee list[], int len);
  * \return int Return the sum of salaries
  *
  */
-int showSalary(sEmployee list[], int len);
+float showSalary(sEmployee list[], int len);
 
 /** \brief Search number Of Employees
  *
