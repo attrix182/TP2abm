@@ -1,27 +1,39 @@
 # depslib dependency file v1.0
-1557099263 source:e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.c
-	"ArrayEmployees.h"
+1557509761 source:e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
+	"ArrayEmployees.h"
+	"funcionesGet.h"
 
-1557100230 e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.h
+1557510979 e:\usuarios\escritorio\utn1cuatri\tp2\arrayemployees.h
 
-1557099577 source:e:\usuarios\escritorio\utn1cuatri\tp2\main.c
+1557510499 source:e:\usuarios\escritorio\utn1cuatri\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 	<string.h>
 	<ctype.h>
 	"ArrayEmployees.h"
+	"funcionesGet.h"
 
-1557013555 e:\usuarios\escritorio\utn1cuatri\tp2\menu.h
+1557427659 e:\usuarios\escritorio\utn1cuatri\tp2\menu.h
 
-1556927332 source:e:\usuarios\escritorio\utn1cuatri\tp2\menu.c
+1557430035 source:e:\usuarios\escritorio\utn1cuatri\tp2\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 
 1556562727 source:e:\usuarios\escritorio\utn1cuatri\tp2\sectores.c
+
+1557429192 source:e:\usuarios\escritorio\utn1cuatri\tp2\funcionesget.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funcionesGet.h"
+	"ArrayEmployees.h"
+
+1557428975 e:\usuarios\escritorio\utn1cuatri\tp2\funcionesget.h
 

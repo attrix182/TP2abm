@@ -9,106 +9,128 @@ typedef struct
     float salary;
     int sector;
     int isEmpty;
-} Employee;
+} sEmployee;
 
 /** \brief To indicate that all position in the array are empty,
  * this function put the flag (isEmpty) in TRUE in all
  * position of the array
- * \param list Employee* Pointer to array of employees
+ * \param list sEmployee* Pointer to array of sEmployees
  * \param len int Array length
- * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
+ * \return int Return (0) if Ok
  *
  */
+int initEmployees(sEmployee list[], int len);
 
-int initEmployees(Employee list[], int len);
-
-/** \brief add in a existing list of employees the values received as parameters
+/** \brief add in a existing list of sEmployees the values received as parameters
  * in the first empty position
- * \param list employee*
+ * \param list sEmployee*
  * \param len int
  * \param id int
  * \param name[] char
  * \param lastName[] char
  * \param salary float
  * \param sector int
- * \return int Return (-1) if Error [Invalid length or NULL pointer or without
-free space] - (0) if Ok
- **/
-int addEmployee(Employee list[], int len, int id, char name[],char lastName[],float salary,int sector);
+ * \return int Return (-1) if Error [without free space] - (0) if Ok
+ */
+int addEmployee(sEmployee list[], int len, int id, char name[],char lastName[],float salary,int sector);
 
-/** \brief print the content of employees array
+/** \brief print the content of sEmployees array
  *
- * \param list Employee*
+ * \param list sEmployee*
  * \param length int
- * \return int
+ * \return int Return (0) if Ok
  *
  */
-int printEmployees(Employee list[], int length);
+int printEmployees(sEmployee list[], int length);
 
-/** \brief find an Employee by Id en returns the index position in array.
+/** \brief find an sEmployee by Id en returns the index position in array.
  *
- * \param list Employee*
+ * \param list sEmployee*
  * \param len int
  * \param id int
- * \return Return employee index position or (-1) if [Invalid length or NULL
-pointer received or employee not found]
- *
+ * \return Return sEmployee index position or (-1) if [sEmployee not found]
  */
-int findEmployeeById(Employee list[], int len,int id);
+int findEmployeeById(sEmployee list[], int len,int id);
 
 
-/** \brief Remove a Employee by Id (put isEmpty Flag in 1)
+/** \brief Remove a sEmployee by Id (put isEmpty Flag in 1)
  *
- * \param list Employee*
+ * \param list sEmployee*
  * \param len int
  * \param id int
- * \return int Return (-1) if Error [Invalid length or NULL pointer or if can't find a employee] - (0) if Ok
+ * \return int Return (-1) if Error [if can't find a sEmployee] - (0) if Ok
  *
  */
-int removeEmployee(Employee list[], int len, int id);
+int removeEmployee(sEmployee list[], int len, int id);
 
-/** \brief modify a existing list of employees the values received as parameters in the first empty position
- * \param list employee*
+/** \brief modify a existing list of sEmployees the values received as parameters in the first empty position
+ * \param list sEmployee*
  * \param len int
  * \param id int
  * \param name[] char
  * \param lastName[] char
  * \param salary float
  * \param sector int
- * \return int Return (-1) if Error [Invalid length or NULL pointer or without
-free space] - (0) if Ok
+ * \return int Return (-1) if Error [if can't find a sEmployee] - (0) if Ok
  **/
-int modifyEmployee(Employee list[], int len, int id, char name[],char lastName[],float salary,int sector, int option);
+int modifyEmployee(sEmployee list[], int len, int id, char name[],char lastName[],float salary,int sector, int option);
 
-/** \brief Test
+/** \brief Test array with hardcoded values
  *
- * \param list[] Employee
+ * \param list[] sEmployee
  * \param len int
  * \return int
  *
  */
-int harcode(Employee list[], int len);
+int harcode(sEmployee list[], int len);
 
-/** \brief Sort the elements in the array of employees, the argument order
+/** \brief Sort the elements in the array of sEmployees, the argument order
 indicate UP or DOWN order
  *
- * \param list Employee*
+ * \param list sEmployee*
  * \param len int
  * \param order int [1] indicate UP - [0] indicate DOWN
  * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
  *
  */
-int sortEmployees(Employee list[], int len, int order);
+int sortEmployees(sEmployee list[], int len, int order);
 
 
 
-/** \brief
+/** \brief Search first empty index in the array of sEmployees
  *
- * \param list[] Employee
+ * \param list[] sEmployee
  * \param len int
- * \return int
+ * \return int Return first ID available
  *
  */
-int searchEmpty(Employee list[], int len);
+int generateID(sEmployee list[], int len);
+
+/** \brief Shows salaries
+ *
+ * \param list[] sEmployee
+ * \param len int
+ * \return int Return the sum of salaries
+ *
+ */
+int showSalary(sEmployee list[], int len);
+
+/** \brief Search number Of Employees
+ *
+ * \param list[] sEmployee
+ * \param len int
+ * \return int return number Of Employees
+ *
+ */
+int searchFull(sEmployee list[], int len);
+
+/** \brief Find the number of employees that exceed the average salary.
+ *
+ * \param list[] sEmployee
+ * \param len int
+ * \return int retrun employees that exceed the average
+ *
+ */
+int searchSalarySup(sEmployee list[], int len);
 
 #endif // ARRAYEMPLOYEES_H_INCLUDED
