@@ -2,23 +2,23 @@
 #define MENU_H_INCLUDED
 
 
-/** \brief
+/** \brief Muestra opciones del menu y obtiene una opcion
  *
- * \return int
+ * \return int retorna la opcion typeada
  *
  */
 int pedirOpcionMenu();
 
-/** \brief
+/** \brief Muestra un menu con opciones de modificacion y obtiene una opcion
  *
- * \return int
+ * \return int retorna la opcion recibida
  *
  */
 int getOptionModify();
 
-/** \brief
+/** \brief Muestra un menu con opciones de informes y obtiene una opcion
  *
- * \return int
+ * \return int retorna la opcion recibida
  *
  */
 int getOptionShow();
