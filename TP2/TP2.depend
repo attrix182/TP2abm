@@ -20,10 +20,11 @@
 
 1557427659 e:\usuarios\escritorio\utn1cuatri\tp2\menu.h
 
-1557430035 source:e:\usuarios\escritorio\utn1cuatri\tp2\menu.c
+1557511372 source:e:\usuarios\escritorio\utn1cuatri\tp2\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
+	"funcionesGet.h"
 
 1556562727 source:e:\usuarios\escritorio\utn1cuatri\tp2\sectores.c
 

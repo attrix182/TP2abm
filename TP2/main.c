@@ -120,7 +120,7 @@ int main()
             break;
 
         default:
-            printf("Opcion incorrecta\n");
+            printf("Opcion invalida\n");
             break;
         }
 
